@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ================================================================
+             Cron Job: Quét tồn kho và tạo RFQ vào cuối ngày
+             Chạy hàng ngày lúc 23:00 server time
+             ================================================================ -->
+        <record id="ir_cron_auto_rfq_scheduled" model="ir.cron">
+            <field name="name">Auto RFQ: Quét tồn kho theo lịch (cuối ngày)</field>
+            <field name="model_id" ref="stock.model_stock_warehouse_orderpoint"/>
+            <field name="state">code</field>
+            <field name="code">model._run_scheduled_rfq()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active">True</field>
+            <field name="nextcall">2026-06-01 23:00:00</field>
+            <field name="priority">10</field>
+            <field name="user_id" ref="base.user_root"/>
+        </record>
+
+    </data>
+</odoo>
