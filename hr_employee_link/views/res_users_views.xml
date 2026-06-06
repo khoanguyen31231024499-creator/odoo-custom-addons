@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- User-Employee Link Views for Procure_to_pay -->
+        <record id="view_users_form_employee_link_ptp" model="ir.ui.view">
+            <field name="name">res.users.form.employee_link.ptp</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="employee_id" string="Employee" 
+                           domain="[('user_id','=', False)]" 
+                           help="Link this user to an employee (for Purchase users)."/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_users_tree_employee_link_ptp" model="ir.ui.view">
+            <field name="name">res.users.tree.employee_link.ptp</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <field name="login" position="after">
+                    <field name="employee_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
