@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_purchase_order_employee,Purchase Order - Employee,purchase.model_purchase_order,group_purchase_employee_ptp,1,1,1,0
-access_purchase_order_line_employee,Purchase Order Line - Employee,purchase.model_purchase_order_line,group_purchase_employee_ptp,1,1,1,0
-access_purchase_order_manager,Purchase Order - Manager,purchase.model_purchase_order,group_purchase_manager_ptp,1,1,1,1
-access_purchase_order_line_manager,Purchase Order Line - Manager,purchase.model_purchase_order_line,group_purchase_manager_ptp,1,1,1,1
