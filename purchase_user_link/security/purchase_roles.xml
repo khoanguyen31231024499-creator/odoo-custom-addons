@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_purchase_employee_ptp" model="res.groups">
+            <field name="name">Nhân viên</field>
+            <field name="sequence">11</field>
+            <field name="privilege_id" ref="purchase.res_groups_privilege_purchase"/>
+            <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+        </record>
+
+        <record id="group_purchase_manager_ptp" model="res.groups">
+            <field name="name">Quản lý</field>
+            <field name="sequence">21</field>
+            <field name="privilege_id" ref="purchase.res_groups_privilege_purchase"/>
+            <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_manager')), (4, ref('purchase_user_link.group_purchase_employee_ptp'))]"/>
+        </record>
+    </data>
+</odoo>
