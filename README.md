@@ -25,13 +25,9 @@ Bộ module Odoo tùy chỉnh dành riêng cho quy trình quản lý mua hàng (
 ### Danh sách Module
 
 | Module | Chức năng | Phụ thuộc chính |
-| --- | --- | --- |
-| `auto_rfq_reorder`<br> | Tự động quét tồn kho và tạo RFQ nháp khi sản phẩm chạm mức tồn thiểu. Hỗ trợ kích hoạt tức thì hoặc định kỳ, tự động gộp đơn thông minh theo nhà cung cấp và ưu tiên dựa trên thời gian giao hàng (Lead Time).
-
- | `stock`, `purchase`, `sale`, `point_of_sale`<br> |
-| `purchase_user_link`<br> | Quản lý luồng duyệt PO đa cấp. Tự động chặn và chuyển trạng thái "Chờ duyệt" đối với các đơn mua hàng có tổng giá trị từ 20.000.000 VNĐ trở lên. Yêu cầu quản lý phê duyệt hoặc bắt buộc nhập lý do nếu từ chối.
-
- | `purchase`, `base`<br> |
+| :--- | :--- | :--- |
+| `auto_rfq_reorder` | Tự động quét tồn kho và tạo RFQ nháp khi sản phẩm chạm mức tồn thiểu. Hỗ trợ kích hoạt tức thì hoặc định kỳ, tự động gộp đơn thông minh theo nhà cung cấp và ưu tiên dựa trên thời gian giao hàng (Lead Time). | `stock`, `purchase`, `sale`, `point_of_sale` |
+| `purchase_user_link` | Quản lý luồng duyệt PO đa cấp. Tự động chặn và chuyển trạng thái "Chờ duyệt" đối với các đơn mua hàng có tổng giá trị từ 20.000.000 VNĐ trở lên. Yêu cầu quản lý phê duyệt hoặc bắt buộc nhập lý do nếu từ chối. | `purchase`, `base` |
 
 ---
 
@@ -74,12 +70,7 @@ Bộ module Odoo tùy chỉnh dành riêng cho quy trình quản lý mua hàng (
 ./odoo-bin --addons-path=/path/to/odoo/addons,/path/to/odoo-custom-addons
 
 ```
-
-
-
-```
 2.  Khởi động lại Odoo server.
 3.  Bật chế độ **Developer Mode**.
 4.  Truy cập vào **Apps** → Chọn **Update Apps List**.
 5.  Tìm kiếm tên module và tiến hành cài đặt.
-```
